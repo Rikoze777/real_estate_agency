@@ -7,6 +7,7 @@ class AuthorAdmin(admin.ModelAdmin):
     list_editable = ['new_building']
     search_fields = ('town', 'address', 'owner')
     readonly_fields = ["created_at"]
+    list_filter = ['new_building']
 
 
 admin.site.register(Flat, AuthorAdmin)
