@@ -8,6 +8,7 @@ class AuthorAdmin(admin.ModelAdmin):
     search_fields = ('town', 'address', 'owner')
     readonly_fields = ["created_at"]
     list_filter = ['new_building']
+    raw_id_fields = ["liked_by"]
 
 
 class ComplaintAdmin(admin.ModelAdmin):

@@ -6,7 +6,7 @@ from django.db import migrations
 def newbuilding(apps, schema_editor):
     Years = apps.get_model('property', 'Flat')
     for year in Years.objects.all().filter(construction_year__gte=2015):
-        year.new_building=True
+        year.new_building = True
         year.save()
 
 
