@@ -4,10 +4,8 @@ from django.db import migrations
 
 
 def newbuilding(apps, schema_editor):
-    Years = apps.get_model('property', 'Flat')
-    for year in Years.objects.all().filter(construction_year__gte=2015):
-        year.new_building = True
-        year.save()
+    Flats = apps.get_model('property', 'Flat')
+    Flats.objects.filter(construction_year__gte=2015).update(new_building=True)
 
 
 class Migration(migrations.Migration):
