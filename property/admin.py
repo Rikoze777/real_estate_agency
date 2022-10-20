@@ -28,6 +28,6 @@ class FlatsInline(admin.TabularInline):
 
 @admin.register(Owner)
 class OwnerAdmin(admin.ModelAdmin):
-    list_display = ('owner',)
+    list_display = ('name',)
     raw_id_fields = ["flats_in_use"]
     inlines = [FlatsInline]
